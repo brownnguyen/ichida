@@ -1,0 +1,105 @@
+html {
+  line-height: 1; }
+
+main a {
+  color: inherit;
+  display: block; }
+
+main img {
+  display: block;
+  image-rendering: pixelated; }
+
+main button {
+  outline: none; }
+
+.ele-hover {
+  opacity: 1;
+  transition: all 0.3s ease; }
+  .ele-hover:hover {
+    opacity: 0.8; }
+
+.title-h3 {
+  font-size: 2rem;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 40px;
+  letter-spacing: 0.2rem; }
+  @media screen and (max-width: 768px) {
+    .title-h3 {
+      font-size: 1.8rem;
+      margin-bottom: 25px; } }
+
+.wrap-style {
+  display: flex;
+  justify-content: space-between; }
+
+.hover-ef {
+  position: relative;
+  z-index: 0; }
+  .hover-ef::after {
+    content: '';
+    position: absolute;
+    bottom: 1px;
+    left: 1px;
+    top: 1px;
+    right: 1px;
+    background-image: linear-gradient(to bottom, white 60%, rgba(0, 0, 0, 0.3));
+    border-radius: 18px;
+    z-index: -1; }
+  .hover-ef.active::after {
+    background-image: linear-gradient(to bottom, #71bb48 80%, #629f40); }
+  .hover-ef span {
+    height: 36px;
+    min-height: 36px;
+    display: flex;
+    border-radius: inherit;
+    width: 100%;
+    z-index: 2;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    color: inherit;
+    border-radius: 18px;
+    transition: all 0.3s ease; }
+    @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+      .hover-ef span {
+        padding-top: 3px; } }
+    .hover-ef span::after, .hover-ef span::before {
+      content: '';
+      position: absolute;
+      top: 0px;
+      right: 0px;
+      bottom: 0px;
+      left: 0px;
+      border-radius: inherit;
+      transition: all 0.3s ease; }
+    .hover-ef span::after {
+      background-color: #71bb48;
+      z-index: -1;
+      opacity: 0;
+      transition: all 0.3s ease; }
+    .hover-ef span::before {
+      background-color: white;
+      z-index: -2;
+      opacity: 1; }
+  .hover-ef:hover span {
+    transform: translateY(-5px); }
+
+.w-h-100 {
+  width: 100%;
+  height: 100%; }
+
+.w-100 {
+  width: 100%; }
+
+.h-100 {
+  height: 100%; }
+
+.w-100v {
+  width: 100vw; }
+
+.h-100v {
+  height: 100vh; }
+
+.wmax {
+  max-width: 100%; }
