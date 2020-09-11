@@ -4,3 +4,4 @@ sass
 *.scss
 gulpfile.js
 .vscode
+package-lock.json
