@@ -1,0 +1,6 @@
+node_modules
+scss
+sass
+*.scss
+gulpfile.js
+.vscode
