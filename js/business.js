@@ -204,3 +204,20 @@ d3.select('.chart-details.blue dt')
         d3.select('.arcC22 path')
             .style('fill', 'white')
     });
+$('#pie').on('mouseenter', function(e) {
+    $('.img-detail').css({'left': e.clientX + 15 + 'px', 'top': e.clientY + 'px'}).addClass('active');
+    $(window).on('mousemove', function(e) {
+        $('.img-detail').css({'left': e.clientX + 15 + 'px', 'top': e.clientY + 'px'})
+    });
+    $(window).on('mouseover', function(e) {
+        if(($.contains($('#pie').get(0), e.target) || $.contains($('.img-detail').get(0), e.target))) {
+            $('.img-detail').addClass('active');
+        }else{
+            $('.img-detail').removeClass('active');
+        }
+    })
+});
+$('#pie').on('mouseleave', function() {
+    $(window).off('mousemove');
+    // $(window).off('mouseover');
+})
