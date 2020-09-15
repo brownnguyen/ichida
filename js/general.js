@@ -54,3 +54,7 @@ $('.to-top-button').click(function(e) {
         scrollTop: 0//$($.attr(this, 'href')).offset().top
     }, 'slow', 'linear');
 });
+
+$('.faq__row').on('click', function(){
+    ($(this).is('.active'))?$(this).removeClass('active'):$(this).addClass('active');
+});

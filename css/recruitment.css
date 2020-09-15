@@ -1,0 +1,172 @@
+.title-recruit {
+  font-size: 2.4rem;
+  font-weight: bold;
+  color: #1f1f1f;
+  margin-bottom: 40px; }
+
+.required {
+  margin-bottom: 80px; }
+  .required__content {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start; }
+    .required__content__child {
+      max-width: calc(50% - 10px);
+      width: 100%;
+      border: 1px solid #f4f4f4;
+      border-radius: 5px;
+      padding: 30px; }
+      .required__content__child__row {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        color: #1f1f1f;
+        font-size: 1.4rem; }
+        .required__content__child__row:not(:last-of-type) {
+          margin-bottom: 30px; }
+        .required__content__child__row__head {
+          font-weight: bold;
+          width: 25%; }
+        .required__content__child__row__col {
+          width: 75%; }
+          .required__content__child__row__col a {
+            text-decoration: none;
+            color: #3089b8; }
+  @media screen and (max-width: 767px) {
+    .required {
+      margin-bottom: 20px; }
+      .required__content {
+        flex-flow: column nowrap; }
+        .required__content__child {
+          max-width: 100%;
+          margin-bottom: 20px; } }
+
+.faq {
+  margin-bottom: 90px; }
+  .faq__row {
+    position: relative;
+    z-index: 0;
+    border-top: 1px solid #ccc;
+    padding: 30px 0;
+    cursor: pointer;
+    transition: all 0.5s ease; }
+    .faq__row > span {
+      position: absolute;
+      z-index: 0;
+      top: 30px;
+      right: 40px;
+      width: 30px;
+      height: 30px;
+      display: block; }
+      .faq__row > span::before {
+        content: '';
+        position: absolute;
+        z-index: 0;
+        top: 50%;
+        width: 100%;
+        height: 4px;
+        background-color: #3089b8;
+        transform: translateY(-50%);
+        transition: all 0.5s ease; }
+      .faq__row > span::after {
+        content: '';
+        position: absolute;
+        z-index: 0;
+        top: 50%;
+        width: 100%;
+        height: 4px;
+        background-color: #3089b8;
+        transform-origin: center center;
+        transform: translateY(-50%) rotate(90deg);
+        transition: all 0.5s ease; }
+    .faq__row h3 {
+      font-family: 'Montserrat', sans-serif; }
+      .faq__row h3 span {
+        color: #3089b8;
+        font-size: 2.2rem; }
+    .faq__row.active > span::after {
+      transform: translateY(-50%) rotate(180deg); }
+    .faq__row.active .faq__row__answer {
+      height: auto;
+      margin-top: 40px; }
+    .faq__row__answer {
+      height: 0;
+      overflow: hidden;
+      transition: all 0.5s ease;
+      display: flex;
+      justify-content: flex-start;
+      align-items: flex-start; }
+      .faq__row__answer p {
+        font-size: 1.6rem; }
+        .faq__row__answer p.faq__row__answer--head {
+          font-family: 'Montserrat', sans-serif;
+          font-weight: bold;
+          font-size: 1.8rem;
+          margin-right: 20px; }
+  @media screen and (max-width: 1023px) {
+    .faq__row h3 {
+      max-width: 80%; } }
+  @media screen and (max-width: 767px) {
+    .faq__row > span {
+      right: 10px; } }
+
+.company-info {
+  margin-bottom: 110px; }
+  .company-info > div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 860px;
+    width: 100%;
+    margin: auto; }
+    .company-info > div a {
+      max-width: calc(50% - 10px);
+      width: 100%;
+      border: 2px solid #333;
+      text-align: center;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      height: 90px;
+      padding: 0 40px;
+      text-decoration: none;
+      font-size: 2.4rem;
+      font-weight: bold;
+      color: #333; }
+      .company-info > div a span {
+        display: block;
+        width: 50px;
+        height: 15px;
+        position: relative;
+        z-index: 0;
+        transition: all 0.5s ease; }
+        .company-info > div a span::before {
+          content: '';
+          position: absolute;
+          z-index: 0;
+          bottom: 0;
+          right: 0;
+          width: 100%;
+          height: 2px;
+          background-color: #333; }
+        .company-info > div a span::after {
+          content: '';
+          position: absolute;
+          z-index: 0;
+          bottom: 0;
+          right: 0;
+          width: 15px;
+          height: 2px;
+          background-color: #333;
+          transform-origin: right center;
+          transform: rotate(30deg); }
+      .company-info > div a:hover span {
+        transform: translateX(10px); }
+  @media screen and (max-width: 767px) {
+    .company-info > div {
+      flex-flow: column nowrap; }
+      .company-info > div a {
+        max-width: 100%;
+        margin-bottom: 20px; } }
+
+/*# sourceMappingURL=recruitment.css.map */
