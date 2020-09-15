@@ -4,7 +4,33 @@ var heightC1 = 422,
     widthC2 = 300,
     heightC3 = 110,
     widthC3 = 110;
-let pieBig = d3.select('#pie').attr('viewBox', '0 0 ' + widthC1 + ' ' + heightC1).attr('width', widthC1).attr('height', heightC1).append('g').attr('id', 'pieBig').attr('transform', 'translate(' + widthC1/2 + ',' + heightC1/2 + ')');
+d3.select('#pie').attr('viewBox', '0 0 ' + widthC1 + ' ' + heightC1).attr('width', widthC1).attr('height', heightC1);
+d3.select('#pie').append('defs').append('filter').attr('id','shadow').append('feDropShadow')
+    .attr('dx', 0)
+    .attr('dy', 0)
+    .attr('stdDeviation', 10)
+    .attr('flood-color', 'rgba(1,1,1,0.5)');
+d3.select('#pie defs').append('g')
+    .attr('transform', 'translate(211,211)')
+    .append('path')
+    .attr('id', 'text-path1')
+    .attr('d', d3.arc()
+        .innerRadius(0)
+        .outerRadius(170)
+        .startAngle(-3/10*Math.PI)
+        .endAngle(2*Math.PI -3/10*Math.PI)
+    );
+d3.select('#pie defs g')
+    .append('path')
+    .attr('id', 'text-path2')
+    .attr('d', d3.arc()
+        .innerRadius(185)
+        .outerRadius(211)
+        .startAngle(-3/10*Math.PI)
+        .endAngle(2*Math.PI -3/10*Math.PI)
+    )
+    // .attr('transform',"rotate(-85 100 100)");
+let pieBig = d3.select('#pie').append('g').attr('id', 'pieBig').attr('transform', 'translate(' + widthC1/2 + ',' + heightC1/2 + ')');
 let dataPieC1 = [
     {value: 32, color: '#90b63d', text: '環境構築関連事業'},
     {value: 68, color: '#3088b7', text: 'ICT関連事業'}
@@ -43,16 +69,14 @@ C1arc.append('path')
     });
 C1arc.append('text')
     .attr('text-anchor',"middle")
-    .attr('transform', function(d,i) {
-        if(i === 0) {
-            return 'translate(0,40) scale(0.94, 1)';
-        }
-        return 'translate(0,-40) scale(0.94, 1)'
-    })
     .append('textPath')
     .attr('href', function(d,i) {
-        return '#path' + i;
-    }).text(function(d,i) {
+        if( i === 0) {
+            return '#text-path1';
+        }
+        return '#text-path2';
+    })
+    .text(function(d,i) {
         return dataPieC1[i].text;
     }).attr('font-family','Yu Gothic, sans-serif')
     .attr('font-size', '18px')
@@ -61,11 +85,13 @@ C1arc.append('text')
     .attr('font-weight', 600)
     .attr('startOffset', function(d,i) {
         if( i === 0) {
-            return '23.5%';
+            return '15%';
         }
-        return '26.4%'
+        return '69.57%';
     })
-let pieMedium = d3.select('#pie').append('g').attr('id', 'pieMedium').attr('transform', 'translate(' + widthC1/2 + ',' + heightC1/2 + ')');
+let pieMedium = d3.select('#pie').append('g').attr('id', 'pieMedium')
+    .attr('transform', 'translate(' + widthC1/2 + ',' + heightC1/2 + ')')
+    .style('filter','url(#shadow)');
 let C2arc = pieMedium.selectAll('.arcC2')
             .data(pieC2(dataPieC2))
             .enter()
@@ -154,3 +180,27 @@ C3arc.append('text')
     .text(function(d,i) {
         return dataPieC3[i].text;
     }).attr('transform', 'translate(0, 20)');
+d3.select('.chart-details.violet dt')
+    .on('mouseover', function() {
+        d3.select('.arcC21 path')
+            .style('fill', '#f4e8ff');
+    }).on('mouseout', function() {
+        d3.select('.arcC21 path')
+            .style('fill', 'white')
+    });
+d3.select('.chart-details.green dt')
+    .on('mouseover', function() {
+        d3.select('.arcC20 path')
+            .style('fill', '#f1ffd4');
+    }).on('mouseout', function() {
+        d3.select('.arcC20 path')
+            .style('fill', 'white')
+    });
+d3.select('.chart-details.blue dt')
+    .on('mouseover', function() {
+        d3.select('.arcC22 path')
+            .style('fill', '#c3eaff');
+    }).on('mouseout', function() {
+        d3.select('.arcC22 path')
+            .style('fill', 'white')
+    });
