@@ -14,6 +14,7 @@
     <meta property="og:description" content="">
     <meta name="keywords" content="">
     <meta name="description" content="">
+    <link rel="icon" href="./images/common/img_rel_icon.jpg">
     <link rel="stylesheet" href="./assets/css/slick-theme.css">
     <link rel="stylesheet" href="./assets/css/slick.css">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -26,10 +27,83 @@
 
     <header class="header">
 
+        <h1 class="header__logo">
+            <a class="nav--link a-none" href="index01.html">
+                <img src="./images/common/img_icon_logo.png" alt="UCHIDA">
+            </a>
+        </h1>
+        <a class="header__recruit a-none" href="#"><span class="d-td-none">内田洋行　</span>RECRUIT 2019</a>
+
+        <nav class="header__nav d-td-none">
+            <a class="header__entry a-none" href="#"><img src="./images/common/img_icon_user.png"
+                    alt="マイページ"><span>マイページ</span></a>
+            <a class="header__entry a-none" href="#"><img src="./images/common/img_icon_pencil.png"
+                    alt="エントリー"><span>エントリー</span></a>
+        </nav>
+
+        <nav class="header__menu">
+
+            <ul class="menu ul-none">
+
+                <li class="menu__item">
+                    <span>WHAT</span>
+
+                    <a class="a-none" href="#">事業紹介</a>
+                    <a class="a-none" href="#">事業紹介</a>
+
+                </li>
+                <li class="menu__item">
+                    <span>WHO</span>
+
+                    <a class="a-none" href="#">社員インタビュー</a>
+
+                </li>
+                <li class="menu__item">
+                    <span>HOW</span>
+
+                    <a class="a-none" href="#">オフィス探訪</a>
+                    <a class="a-none" href="#">プロジェクト紹介</a>
+                    <a class="a-none" href="#">社長メッセージ</a>
+
+                </li>
+                <li class="menu__item">
+                    <span>RECRUIT</span>
+
+                    <a class="a-none" href="#">採用情報</a>
+
+                </li>
+                <li class="menu__item d-td-block">
+
+                    <a class="header__entry a-none" href="#"><img src="./images/common/img_icon_user.png"
+                            alt="マイページ"><span>マイページ</span></a>
+
+                </li>
+                <li class="menu__item d-td-block">
+
+                    <a class="header__entry a-none" href="#"><img src="./images/common/img_icon_pencil.png"
+                            alt="エントリー"><span>エントリー</span></a>
+
+                </li>
+
+            </ul>
+
+        </nav>
+
+        <button class="hambuger-button">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
     </header>
     <main class="main">
         <section class="mv-slide-top">
             <img class="text-title-img" src="./images/top/img-title-text.png" alt="">
+            <div class="scroll" id="scroll">
+                <div class="img-scroll">
+                    <img src="./images/top/icon-arrow-scroll.png" alt="">
+                </div>
+                <span>SCROLL</span>
+            </div>
             <span class="name">UCHIDA YOKO</span>
             <div class="slide-content">
                 <div class="content">
@@ -49,7 +123,7 @@
                 </div>
             </div>
         </section>
-        <section class="what">
+        <section class="what" id="what">
             <div class="what-content bg-content">
                 <div class="content">
                     <h2 class="title">
@@ -60,96 +134,85 @@
                     <p class="text">「公共」「オフィス」「情報」の3つの分野の専門性と、ICT・環境構築の融合により独自性のある「働く場」「学ぶ場」の創造を進めています。</p>
                 </div>
             </div>
-            <div class="what-content-main">
-                <div class="content">
-                    <div class="img">
-                        <img src="./images/top/img-what-1.png" alt="">
-                        <span class="title-what">I T</span>
-                    </div>
-                    <div class="text-body">
-                        <p>この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。この文章はダミーです。
-                        </p>
-                    </div>
-                </div>
-                <div class="content">
-                    <div class="img">
-                        <img src="./images/top/img-what-2.png" alt="">
-                        <span class="title-what">商 社</span>
-                    </div>
-                    <div class="text-body">
-                        <p>この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。この文章はダミーです。
-                        </p>
-                    </div>
-                </div>
-                <div class="content">
-                    <div class="img">
-                        <img src="./images/top/img-what-3.png" alt="">
-                        <span class="title-what">空 間</span>
-                    </div>
-                    <div class="text-body">
-                        <p>この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。この文章はダミーです。
-                        </p>
-                    </div>
-                </div>
-            </div>
-            <a href="#link" class="btn-button">
-                <span>事業紹介</span>
-                <div class="img">
-                    <img src="./images/top/icon-arrow-white.png" alt="">
-                </div>
-            </a>
-            <div class="what-case">
-                <div class="case-content">
-                    <div class="img">
-                        <img src="./images/top/img-what-4.png" alt="">
+            <div class="m-20">
+                <div class="what-content-main">
+                    <div class="content">
+                        <div class="img">
+                            <img src="./images/top/img-what-1.png" alt="">
+                            <span class="title-what">I T</span>
+                        </div>
+                        <div class="text-body">
+                            <p>この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。この文章はダミーです。
+                            </p>
+                        </div>
                     </div>
                     <div class="content">
-                        <span class="case">CASE:<span>事例紹介</span></span>
-                        <div class="text">
-                            <span>「どこにもない未来の図書館をつくる」</span>
-                            <img src="./images/top/icon-arrow-black.png" alt="">
+                        <div class="img">
+                            <img src="./images/top/img-what-2.png" alt="">
+                            <span class="title-what">商 社</span>
                         </div>
-                        <span class="small">武蔵野大学 美術館・図書館</span>
-                    </div>
-                </div>
-                <div class="case-content">
-                    <div class="img">
-                        <img src="./images/top/img-what-4.png" alt="">
+                        <div class="text-body">
+                            <p>この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。この文章はダミーです。
+                            </p>
+                        </div>
                     </div>
                     <div class="content">
-                        <span class="case">CASE:<span>事例紹介</span></span>
-                        <div class="text">
-                            <span>「どこにもない未来の図書館をつくる」</span>
-                            <img src="./images/top/icon-arrow-black.png" alt="">
+                        <div class="img">
+                            <img src="./images/top/img-what-3.png" alt="">
+                            <span class="title-what">空 間</span>
                         </div>
-                        <span class="small">武蔵野大学 美術館・図書館</span>
+                        <div class="text-body">
+                            <p>この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。この文章はダミーです。
+                            </p>
+                        </div>
                     </div>
                 </div>
-                <div class="case-content">
+                <a href="#link" class="btn-button">
+                    <span>事業紹介</span>
                     <div class="img">
-                        <img src="./images/top/img-what-4.png" alt="">
+                        <img src="./images/top/icon-arrow-white.png" alt="">
                     </div>
-                    <div class="content">
-                        <span class="case">CASE:<span>事例紹介</span></span>
-                        <div class="text">
-                            <span>「どこにもない未来の図書館をつくる」</span>
-                            <img src="./images/top/icon-arrow-black.png" alt="">
+                </a>
+                <div class="what-case">
+                    <a href="#link" class="case-content">
+                        <div class="img">
+                            <img src="./images/top/img-what-4.png" alt="">
                         </div>
-                        <span class="small">武蔵野大学 美術館・図書館</span>
-                    </div>
-                </div>
-                <div class="case-content">
-                    <div class="img">
-                        <img src="./images/top/img-what-4.png" alt="">
-                    </div>
-                    <div class="content">
-                        <span class="case">CASE:<span>事例紹介</span></span>
-                        <div class="text">
-                            <span>「どこにもない未来の図書館をつくる」</span>
-                            <img src="./images/top/icon-arrow-black.png" alt="">
+                        <div class="content">
+                            <span class="case">CASE:<span>事例紹介</span></span>
+                            <div class="text">
+                                <span>「どこにもない未来の図書館をつくる」</span>
+                                <img src="./images/top/icon-arrow-black.png" alt="">
+                            </div>
+                            <span class="small">武蔵野大学 美術館・図書館</span>
                         </div>
-                        <span class="small">武蔵野大学 美術館・図書館</span>
-                    </div>
+                    </a>
+                    <a href="#link" class="case-content">
+                        <div class="img">
+                            <img src="./images/top/img-what-4.png" alt="">
+                        </div>
+                        <div class="content">
+                            <span class="case">CASE:<span>事例紹介</span></span>
+                            <div class="text">
+                                <span>「どこにもない未来の図書館をつくる」</span>
+                                <img src="./images/top/icon-arrow-black.png" alt="">
+                            </div>
+                            <span class="small">武蔵野大学 美術館・図書館</span>
+                        </div>
+                    </a>
+                    <a href="#link" class="case-content">
+                        <div class="img">
+                            <img src="./images/top/img-what-4.png" alt="">
+                        </div>
+                        <div class="content">
+                            <span class="case">CASE:<span>事例紹介</span></span>
+                            <div class="text">
+                                <span>「どこにもない未来の図書館をつくる」</span>
+                                <img src="./images/top/icon-arrow-black.png" alt="">
+                            </div>
+                            <span class="small">武蔵野大学 美術館・図書館</span>
+                        </div>
+                    </a>
                 </div>
             </div>
         </section>
@@ -165,92 +228,232 @@
                         社内の様子についてご紹介します。</p>
                 </div>
             </div>
-            <div class="who-people">
-                <div class="content">
-                    <div class="img">
-                        <span class="title-who-people">
-                            公私ともに何でも相談できる
-                            同僚は私の財産です。
-                        </span>
-                        <img src="./images/top/img-who-1.png" alt="">
-                        <span class="info">営 業</span>
-                    </div>
-                    <div class="details">
-                        <span class="pos">
-                            名前 名前
-                        </span>
-                        <p class="date">
-                            2008年入社 / 教育学部卒
-                        </p>
-                        <p>教育ICT事業部 西日本営業部</p>
-                    </div>
-                </div>
-                <div class="content">
-                    <div class="img">
-                        <span class="title-who-people">
-                            公私ともに何でも相談できる
-                            同僚は私の財産です。
-                        </span>
-                        <img src="./images/top/img-who-2.png" alt="">
-                        <span class="info">システムエンジニア</span>
-                    </div>
-                    <div class="details">
-                        <span class="pos">
-                            名前 名前
-                        </span>
-                        <p class="date">
-                            2008年入社 / 教育学部卒
-                        </p>
-                        <p>MPS事業部 公共APサポートセンター</p>
-                    </div>
-                </div>
-                <div class="content">
-                    <div class="img">
-                        <span class="title-who-people">
-                            公私ともに何でも相談できる
-                            同僚は私の財産です。
-                        </span>
-                        <img src="./images/top/img-who-3.png" alt="">
-                        <span class="info">営 業</span>
-                    </div>
-                    <div class="details">
-                        <span class="pos">
-                            名前 名前
-                        </span>
-                        <p class="date">
-                            2009年入社 / 情報コミュニケーション学部卒
-                        </p>
-                        <p>事業統括グループ 第２企画部</p>
-                    </div>
-                </div>
-                <div class="content">
-                    <div class="img">
-                        <span class="title-who-people">
-                            公私ともに何でも相談できる
-                            同僚は私の財産です。
-                        </span>
-                        <img src="./images/top/img-who-4.png" alt="">
-                        <span class="info">企 画</span>
-                    </div>
-                    <div class="details">
-                        <span class="pos">
-                            名前 名前
-                        </span>
-                        <p class="date">
-                            2007年入社 / 教育学部卒
-                        </p>
-                        <p>ICRディビジョン ICTプロダクト企画部</p>
-                    </div>
+            <div class="m-20">
+                <div class="who-people">
+                    <a class="content" href="link">
+                        <div class="img">
+                            <span class="title-who-people">
+                                公私ともに何でも相談できる
+                                同僚は私の財産です。
+                            </span>
+                            <img src="./images/top/img-who-1.png" alt="">
+                            <span class="info">営 業</span>
+                        </div>
+                        <div class="details">
+                            <span class="pos">
+                                名前 名前
+                            </span>
+                            <p class="date">
+                                2008年入社 / 教育学部卒
+                            </p>
+                            <p>教育ICT事業部 西日本営業部</p>
+                        </div>
+                    </a>
+                    <a class="content" href="link">
+                        <div class="img">
+                            <span class="title-who-people">
+                                公私ともに何でも相談できる
+                                同僚は私の財産です。
+                            </span>
+                            <img src="./images/top/img-who-2.png" alt="">
+                            <span class="info">システムエンジニア</span>
+                        </div>
+                        <div class="details">
+                            <span class="pos">
+                                名前 名前
+                            </span>
+                            <p class="date">
+                                2008年入社 / 教育学部卒
+                            </p>
+                            <p>MPS事業部 公共APサポートセンター</p>
+                        </div>
+                    </a>
+                    <a class="content" href="link">
+                        <div class="img">
+                            <span class="title-who-people">
+                                公私ともに何でも相談できる
+                                同僚は私の財産です。
+                            </span>
+                            <img src="./images/top/img-who-3.png" alt="">
+                            <span class="info">営 業</span>
+                        </div>
+                        <div class="details">
+                            <span class="pos">
+                                名前 名前
+                            </span>
+                            <p class="date">
+                                2009年入社 / 情報コミュニケーション学部卒
+                            </p>
+                            <p>事業統括グループ 第２企画部</p>
+                        </div>
+                    </a>
+                    <a class="content" href="link">
+                        <div class="img">
+                            <span class="title-who-people">
+                                公私ともに何でも相談できる
+                                同僚は私の財産です。
+                            </span>
+                            <img src="./images/top/img-who-4.png" alt="">
+                            <span class="info">企 画</span>
+                        </div>
+                        <div class="details">
+                            <span class="pos">
+                                名前 名前
+                            </span>
+                            <p class="date">
+                                2007年入社 / 教育学部卒
+                            </p>
+                            <p>ICRディビジョン ICTプロダクト企画部</p>
+                        </div>
+                    </a>
                 </div>
             </div>
-            <a href="#link" class="btn-button">
+            <a href="./staff_archive/" class="btn-button">
                 <span>社員インタビュー</span>
                 <div class="img">
                     <img src="./images/top/icon-arrow-black.png" alt="">
                 </div>
             </a>
         </section>
+        <section class="how">
+            <div class="how-title bg-content">
+                <div class="content">
+                    <h2 class="title">
+                        HOW
+                    </h2>
+                </div>
+                <div class="content">
+                    <p class="text">この文章はダミーです。文字の大きさ、量、字間、行間等を確認するため
+                        に入れています。この文章はダミーです。</p>
+                </div>
+            </div>
+            <div class="m-20">
+                <div class="how-content">
+                    <div class="content">
+                        <div class="img">
+                            <img src="./images/top/img-how-1.png" alt="">
+                            <a href="" class="btn-how">
+                                <span>オフィス探訪</span>
+                                <div class="icon">
+                                    <img src="./images/top/icon-arrow-black.png" alt="">
+                                </div>
+                            </a>
+                        </div>
+                        <div class="details">
+                            <p class="text">
+                                この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。この文章はダミーです。
+                            </p>
+                        </div>
+                    </div>
+                    <div class="content">
+                        <div class="img">
+                            <img src="./images/top/img-how-2.png" alt="">
+                            <a href="" class="btn-how">
+                                <span>プロジェクト紹介</span>
+                                <div class="icon">
+                                    <img src="./images/top/icon-arrow-black.png" alt="">
+                                </div>
+                            </a>
+                        </div>
+                        <div class="details">
+                            <p class="text">
+                                この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。この文章はダミーです。
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="top-message">
+            <div class="m-20">
+                <a href="#link" class="m-20 border-top-mess">
+                    <h2 class="top-mess-title">
+                        TOP MESSAGE
+                    </h2>
+                    <div class="container">
+                        <div class="top-mess-content">
+                            <div class="content">
+                                <div class="text-div">
+                                    <div class="text">
+                                        <h3 class="title-text">
+                                            さまざまな人と積極的にふれ合って視野を広げ
+                                            自ら課題を発見できる人材を目指して欲しい
+                                        </h3>
+                                        <div class="icon">
+                                            <img src="./images/top/icon-arrow-black.png" alt="">
+                                        </div>
+                                    </div>
+                                    <span class="small">代表取締役社長 大久保昇</span>
+                                </div>
+                            </div>
+                            <div class="img">
+                                <img src="./images/top/img-top-message.png" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </section>
+        <section class="recruit">
+            <div class="container">
+                <div class="recruit-content">
+                    <h2 class="title">RECRUIT</h2>
+                    <a href="#link" class="btn-button">
+                        <span>採用情報</span>
+                        <div class="img">
+                            <img src="./images/top/icon-arrow-white.png" alt="">
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </section>
     </main>
+    <footer class="footer">
+
+        <div class="footer__decor">
+            <a class="to-top-button" href="#">
+                <span></span>
+            </a>
+        </div>
+
+
+        <ul class="menu ul-none">
+
+            <li class="menu__item">
+                <span>WHAT</span>
+
+                <a class="a-none" href="#">事業紹介</a>
+                <a class="a-none" href="#">事業紹介</a>
+
+            </li>
+            <li class="menu__item">
+                <span>WHO</span>
+
+                <a class="a-none" href="#">社員インタビュー</a>
+
+            </li>
+            <li class="menu__item">
+                <span>HOW</span>
+
+                <a class="a-none" href="#">オフィス探訪</a>
+                <a class="a-none" href="#">プロジェクト紹介</a>
+                <a class="a-none" href="#">社長メッセージ</a>
+
+            </li>
+            <li class="menu__item">
+                <span>RECRUIT</span>
+
+                <a class="a-none" href="#">採用情報</a>
+
+            </li>
+
+        </ul>
+
+        <div class="footer__linkto">
+            <a href="#">コーポレートサイトへ</a>
+            <p>Copyright © Uchida Yoko Co., Ltd. 2019</p>
+        </div>
+    </footer>
     <script src="./assets/js/jquery-2.2.4.min.js"></script>
     <script src="./assets/js/slick.min.js"></script>
     <script src="./js/general.js"></script>
