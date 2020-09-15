@@ -1,0 +1,164 @@
+@charset "UTF-8";
+.project__vision .flex-box__i .ul-none li p, .project__wrap p, .project__wrap h3 span {
+  font-weight: 500;
+}
+
+.project__vision .flex-box__i .ul-none li h6, .project__wrap h3, .project__hero .project__caption,
+.project__hero .project__quote {
+  font-weight: 700;
+}
+
+.project__wrap h3 {
+  font-family: "Montserrat", sans-serif;
+}
+
+.project__wrap h3 span {
+  font-family: "游ゴシック Medium", "Yu Gothic Medium", "游ゴシック体", YuGothic, "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic ProN", "Hiragino Kaku Gothic Pro", "メイリオ", "ＭＳ ゴシック", sans-serif;
+}
+
+.flex-box, .project__wrap h3, .project__wrap_i {
+  display: flex;
+  align-items: center;
+}
+
+/**
+ * project
+ */
+.project__hero {
+  width: 100%;
+  position: relative;
+}
+.project__hero .js-project-slick {
+  width: 100%;
+  position: relative;
+}
+.project__hero .js-project-slick::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(48, 137, 184, 0.6);
+}
+.project__hero img {
+  width: 100%;
+  display: block;
+}
+.project__hero .project__caption,
+.project__hero .project__quote {
+  color: #fff;
+}
+.project__hero .project__caption {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  font-size: 5rem;
+  letter-spacing: 1rem;
+  margin: 0 auto;
+  transform: translateY(-50%);
+  text-align: center;
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+}
+.project__hero .project__quote {
+  font-size: 2.4rem;
+  letter-spacing: 0.2rem;
+}
+
+.project__wrap {
+  width: 100%;
+  background-color: #3089b8;
+}
+.project__wrap_i {
+  width: 100%;
+  padding-top: 6rem;
+  padding-bottom: 4rem;
+}
+.project__wrap h3 {
+  font-size: 3.2rem;
+  color: #fff;
+  flex-direction: column;
+  align-items: flex-start;
+  padding-left: 8rem;
+  width: 38.75%;
+  line-height: 32px;
+  letter-spacing: 0.4rem;
+}
+.project__wrap h3 span {
+  font-size: 1.8rem;
+  letter-spacing: 0.2rem;
+}
+.project__wrap p {
+  width: 61.25%;
+  color: #fff;
+  font-size: 1.4rem;
+  position: relative;
+  padding-left: 5.5rem;
+  letter-spacing: 0.1rem;
+}
+.project__wrap p::before {
+  content: "";
+  display: block;
+  width: 0.2rem;
+  height: 8rem;
+  background-color: #fff;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+/**
+ * flex box
+ */
+.flex-box {
+  width: 100%;
+  justify-content: space-between;
+}
+.flex-box__i {
+  width: calc(100% - 10px);
+}
+
+/**
+ * project vision
+ */
+.project__vision {
+  width: 100%;
+}
+.project__vision .flex-box__i div {
+  width: 100%;
+}
+.project__vision .flex-box__i div span {
+  width: 18rem;
+  height: 18rem;
+  background-color: red;
+  display: block;
+  border-radius: 50%;
+  margin: 0 auto;
+}
+.project__vision .flex-box__i .ul-none {
+  padding: 0 8.5rem;
+}
+.project__vision .flex-box__i .ul-none li:last-of-type {
+  margin-top: 2rem;
+}
+.project__vision .flex-box__i .ul-none li h6 {
+  font-size: 1.6rem;
+  letter-spacing: 0.1rem;
+  color: #1f1f1f;
+  line-height: 16px;
+}
+.project__vision .flex-box__i .ul-none li p {
+  font-size: 1.6rem;
+  letter-spacing: 0.1rem;
+  color: #1f1f1f;
+  line-height: 32px;
+}
+
+/**
+ * 
+ */
+
+/*# sourceMappingURL=project.css.map */
