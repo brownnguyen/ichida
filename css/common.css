@@ -161,7 +161,7 @@ body::-webkit-scrollbar-thumb {
   right: 0;
   margin: 0 auto;
   transition: 0.5s ease-in;
-  background-image: linear-gradient(90deg, rgba(255, 255, 255, 0.8) 0%, rgba(255, 255, 255, 0.8) 100%);
+  background-image: linear-gradient(90deg, white 0%, white 100%);
   background-repeat: no-repeat;
   background-size: 0 100%;
   background-position: center;
@@ -176,6 +176,8 @@ body::-webkit-scrollbar-thumb {
     margin: 0;
     height: 6rem;
     padding: 0 2rem;
+    display: flex;
+    justify-content: center;
   }
 }
 .header__logo {
@@ -185,6 +187,12 @@ body::-webkit-scrollbar-thumb {
 }
 .header__logo img {
   width: 100%;
+}
+@media only screen and (max-width: 768px) {
+  .header__logo {
+    width: 8rem;
+    height: 3.5rem;
+  }
 }
 .header__recruit {
   font-size: 1.4rem;
@@ -351,11 +359,12 @@ body::-webkit-scrollbar-thumb {
   background: transparent;
   cursor: pointer;
   transform: translateY(-50%);
+  transition: all 0.3s ease;
 }
 @media only screen and (max-width: 1024px) {
   .hambuger-button {
     top: 3rem;
-    left: calc(100% - 40px);
+    left: calc(20px);
   }
 }
 .hambuger-button.active span:nth-of-type(1) {
@@ -443,17 +452,31 @@ body::-webkit-scrollbar-thumb {
     margin: 1.5rem 0;
   }
 }
+@media only screen and (max-width: 500px) {
+  .breadcrumb ul {
+    flex-direction: column;
+  }
+}
 .breadcrumb ul li {
   position: relative;
 }
 .breadcrumb ul li.active a {
   color: #1f1f1f;
 }
-.breadcrumb ul li:not(.active)::after {
+.breadcrumb ul li:not(:first-child)::before {
   content: "|";
   max-width: 5px;
   display: inline-block;
   margin: 0 2rem;
+}
+@media only screen and (max-width: 500px) {
+  .breadcrumb ul li:not(:first-child)::before {
+    content: "";
+    border: 0.5rem solid transparent;
+    border-left-color: #3089c8;
+    margin-left: 0;
+    margin-right: 0.5rem;
+  }
 }
 .breadcrumb ul li a {
   color: #999999;
@@ -533,6 +556,8 @@ body::-webkit-scrollbar-thumb {
 }
 @media only screen and (max-width: 768px) {
   .to-top-button {
+    display: none;
+    opacity: 0;
     width: 5rem;
     border-radius: 2.5rem;
     border: 2px solid #3089b8;
@@ -540,6 +565,10 @@ body::-webkit-scrollbar-thumb {
     right: 2rem;
     bottom: 6rem;
     background-color: #3089b8;
+  }
+  .to-top-button.active {
+    display: flex;
+    opacity: 1;
   }
 }
 .to-top-button:hover {

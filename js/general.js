@@ -18,9 +18,8 @@ $(window).on('load resize scroll', function() {
 
     //--------to top button
     if (_scroll > 400) {
-        if (!_toTopButton.hasClass('active')) {
-            _toTopButton.addClass('active');
-        }
+        _toTopButton.addClass('active');
+        
     } else {
         _toTopButton.removeClass('active');
     }
