@@ -61,7 +61,7 @@ C1arc.append('text')
     .attr('font-weight', 600)
     .attr('startOffset', function(d,i) {
         if( i === 0) {
-            return '24.5%';
+            return '23.5%';
         }
         return '26.4%'
     })
