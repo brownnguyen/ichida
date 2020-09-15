@@ -1,0 +1,98 @@
+.office-area .office__desc {
+    font-weight: 500;
+}
+
+.office-area .office__title {
+    font-weight: 700;
+}
+
+/**
+ * office
+ */
+.office-area {
+    width: 100%;
+}
+
+.office-area .office__title {
+    font-size: 2.4rem;
+    line-height: 24px;
+    color: #1f1f1f;
+}
+
+@media only screen and (max-width: 768px) {
+    .office-area .office__title {
+        font-size: 2rem;
+        line-height: 30px;
+    }
+}
+
+.office-area .office__desc {
+    margin-top: 3.2rem;
+    font-size: 1.6rem;
+    color: #1f1f1f;
+    letter-spacing: 0.15rem;
+    line-height: 32px;
+}
+
+@media only screen and (max-width: 768px) {
+    .office-area .office__desc {
+        font-size: 1.4rem;
+    }
+}
+
+/**
+ * office iamges
+ */
+.js-office-img {
+    width: 100%;
+    display: flex;
+    padding: 8rem;
+    flex-wrap: wrap;
+}
+
+@media only screen and (max-width: 768px) {
+    .js-office-img {
+        padding: 0 2rem;
+        margin-top: 5rem;
+    }
+}
+
+.js-office-img li {
+    width: 25%;
+    padding-top: 25%;
+    overflow: hidden;
+    position: relative;
+}
+
+@media only screen and (max-width: 768px) {
+    .js-office-img li {
+        width: 50%;
+        padding-top: 50%;
+    }
+}
+
+.js-office-img li:hover a::after {
+    opacity: 1;
+}
+
+.js-office-img li a {
+    display: block;
+}
+
+.js-office-img li a::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    opacity: 0;
+    background-color: rgba(48, 137, 184, 0.45);
+    transition: all 0.3s ease;
+}
+
+.js-office-img li a img {
+    width: 100%;
+}
+
+/*# sourceMappingURL=office.css.map */
