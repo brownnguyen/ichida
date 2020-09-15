@@ -106,7 +106,7 @@ body::-webkit-scrollbar-thumb {
   opacity: 0.75;
 }
 
-.ul-none {
+ul, .ul-none {
   list-style-type: none;
 }
 
