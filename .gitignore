@@ -5,4 +5,6 @@ sass
 gulpfile.js
 .vscode
 package-lock.json
-package.json
+*.json
+foundation-emails-template
+foundation-zurb-template
