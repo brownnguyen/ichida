@@ -1,3 +1,7 @@
+@media screen and (max-width: 1024px) {
+  .m-20 {
+    padding: 0 20px; } }
+
 .title {
   font-size: 13rem;
   font-family: "Montserrat", sans-serif;
@@ -66,6 +70,9 @@ a {
   transition: 0.3s ease-in-out; }
   a:hover {
     opacity: 0.8; }
+
+.footer__linkto a {
+  text-decoration: underline; }
 
 a.btn-button {
   display: flex;
@@ -272,10 +279,10 @@ a.btn-button {
         color: white;
         display: inline-block;
         font-weight: bold;
-        padding: 15px 37px;
+        padding: 15px 43px;
         position: absolute;
         bottom: 0;
-        left: 0; }
+        letter-spacing: 1px; }
       .who-people .content .img img {
         width: 100%;
         display: block; }
@@ -304,6 +311,8 @@ a.btn-button {
       .who-people .content .details .pos {
         font-size: 2.4rem;
         font-weight: bold;
+        display: block;
+        margin-bottom: 10px;
         color: #333333; }
       .who-people .content .details p {
         color: #999999; }
@@ -406,6 +415,15 @@ a.btn-button {
       color: white;
       padding: 30px; }
 
+@media screen and (max-width: 1024px) {
+  .recruit .recruit-content {
+    flex-wrap: wrap; }
+    .recruit .recruit-content h2.title {
+      text-align: center;
+      margin: auto; }
+    .recruit .recruit-content .btn-button {
+      margin: auto; } }
+
 @media screen and (max-width: 768px) {
   .bg-content {
     transform: translate(0) !important;
@@ -457,14 +475,8 @@ a.btn-button {
       right: -25px; }
   .how-content {
     flex-wrap: wrap; }
-  .recruit .recruit-content {
-    flex-wrap: wrap; }
-    .recruit .recruit-content h2.title {
-      text-align: center;
-      font-size: 8rem;
-      margin: auto; }
-    .recruit .recruit-content .btn-button {
-      margin: auto; } }
+  .recruit .recruit-content h2.title {
+    font-size: 8rem; } }
 
 @media screen and (max-width: 576px) {
   .mv-slide-top .scroll {
