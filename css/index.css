@@ -190,10 +190,12 @@ a.btn-button {
     font-weight: bold;
     font-family: "Montserrat", sans-serif;
     color: white; }
-  .mv-slide-top .slide-content .content.active {
+  .mv-slide-top .slide-content .content.active figure.content-figure {
     animation: animateScale 15s alternate; }
   .mv-slide-top .slide-content .content {
     position: relative; }
+    .mv-slide-top .slide-content .content figure.content-figure {
+      overflow: hidden; }
     .mv-slide-top .slide-content .content img {
       width: 100%; }
     .mv-slide-top .slide-content .content::before {
