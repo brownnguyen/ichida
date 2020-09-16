@@ -55,6 +55,42 @@ $('.to-top-button').click(function(e) {
     }, 'slow', 'linear');
 });
 
+$('.footer__decor').click(function(e) {
+    e.preventDefault();
+    $('html, body').animate({
+        scrollTop: 0//$($.attr(this, 'href')).offset().top
+    }, 'slow', 'linear');
+});
+
 $('.faq__row').on('click', function(){
     ($(this).is('.active'))?$(this).removeClass('active'):$(this).addClass('active');
+});
+
+$('.js-office-model').click(function(e){
+    e.preventDefault();
+
+    $('.model').addClass('active');
+
+    let _length = $('.js-office-model').length;
+    let _scr = $(this).find('img').attr('data-model');
+    let _name = $(this).find('img').attr('alt');
+    let _state = $('.js-office-model').index(this) + 1;
+
+    var _modelName = $('.model__name');
+    var _modelState = $('.model__state');
+    var _modelImg = $('.model__img');
+
+    _modelName.text(_name);
+    _modelState.text(_state +'/'+ _length);
+    _modelImg.attr({
+        'src': _scr 
+    });
+
+
+    // let _scr = $(this).find('img').attr('src');
+    console.log(_scr, _name,_length,_state);
+});
+
+$('.model__close').click(function(){
+    $('.model').removeClass('active');
 });
