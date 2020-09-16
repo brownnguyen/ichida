@@ -174,7 +174,11 @@
         min-height: 140px;
         margin-bottom: 20px; }
         .recruitment-flow__chart__procedure--two-block .recruitment-flow__chart__procedure__child {
-          min-height: 140px; } }
+          min-height: 140px; }
+      .recruitment-flow__chart::before {
+        left: 25%; }
+      .recruitment-flow__chart::after {
+        right: 18%; } }
 
 .faq {
   margin-bottom: 90px; }
@@ -239,8 +243,10 @@
           font-size: 1.8rem;
           margin-right: 20px; }
   @media screen and (max-width: 1023px) {
-    .faq__row h3 {
-      max-width: 80%; } }
+    .faq {
+      margin-bottom: 20px; }
+      .faq__row h3 {
+        max-width: 80%; } }
   @media screen and (max-width: 767px) {
     .faq__row > span {
       right: 10px; } }
@@ -297,6 +303,9 @@
           transform: rotate(30deg); }
       .company-info > div a:hover span {
         transform: translateX(10px); }
+  @media screen and (max-width: 1023px) {
+    .company-info {
+      margin-bottom: 0; } }
   @media screen and (max-width: 767px) {
     .company-info > div {
       flex-flow: column nowrap; }
