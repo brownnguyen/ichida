@@ -28,11 +28,11 @@
     <header class="header">
 
         <h1 class="header__logo">
-            <a class="nav--link a-none" href="index01.html">
+            <a class="nav--link a-none" href="./index01.html">
                 <img src="./images/common/img_icon_logo.png" alt="UCHIDA">
             </a>
         </h1>
-        <a class="header__recruit a-none" href="#"><span class="d-td-none">内田洋行　</span>RECRUIT 2019</a>
+        <a class="header__recruit a-none" href="../recruitment/"><span class="d-td-none">内田洋行　</span>RECRUIT 2019</a>
 
         <nav class="header__nav d-td-none">
             <a class="header__entry a-none" href="#"><img src="./images/common/img_icon_user.png"
@@ -44,6 +44,23 @@
         <nav class="header__menu">
 
             <ul class="menu ul-none">
+                <li class="menu__item menu__logo">
+                    <span>
+                        <a class="a-none" href="../">
+                            <img src="./images/common/img_icon_logo.png" alt="UCHIDA">
+                        </a>
+                        <a class="a-none" href="#">
+                            RECRUIT 2019
+                        </a>
+                    </span>
+                </li>
+
+                <li class="menu__item">
+                    <span>HOME</span>
+
+                    <a class="a-none" href="./">採用ホーム</a>
+
+                </li>
 
                 <li class="menu__item">
                     <span>WHAT</span>
@@ -62,29 +79,25 @@
                     <span>HOW</span>
 
                     <a class="a-none" href="./office/">オフィス探訪</a>
-                    <a class="a-none" href="./project/">プロジェクト紹介</a>
-                    <a class="a-none" href="./message/">社長メッセージ</a>
+                    <a class="a-none" href="./office/">プロジェクト紹介</a>
+                    <a class="a-none" href="./office/">社長メッセージ</a>
 
                 </li>
                 <li class="menu__item">
                     <span>RECRUIT</span>
 
-                    <a class="a-none" href="#">採用情報</a>
+                    <a class="a-none" href="./recruitment/">採用情報</a>
 
                 </li>
                 <li class="menu__item d-td-block">
 
                     <a class="header__entry a-none" href="#"><img src="./images/common/img_icon_user.png"
-                            alt="マイページ"><span>マイページ</span></a>
+                            alt="マイページ">マイページ</a>
+
+                    <a class="header__entry a-none" href="./recruitment/"><img src="./images/common/img_icon_pencil.png"
+                            alt="エントリー">エントリー</a>
 
                 </li>
-                <li class="menu__item d-td-block">
-
-                    <a class="header__entry a-none" href="#"><img src="./images/common/img_icon_pencil.png"
-                            alt="エントリー"><span>エントリー</span></a>
-
-                </li>
-
             </ul>
 
         </nav>
@@ -169,9 +182,10 @@
                 </div>
                 <a href="./business/" class="btn-button">
                     <span>事業紹介</span>
-                    <div class="img">
+                    <!-- <div class="img">
                         <img src="./images/top/icon-arrow-white.png" alt="">
-                    </div>
+                    </div> -->
+                    <span class="arrow"></span>
                 </a>
                 <div class="what-case">
                     <a href="#link" class="case-content">
@@ -307,13 +321,11 @@
                         </div>
                     </a>
                 </div>
+                <a href="./staff_archive/" class="btn-button">
+                    <span>社員インタビュー</span>
+                    <span class="arrow"></span>
+                </a>
             </div>
-            <a href="./staff_archive/" class="btn-button">
-                <span>社員インタビュー</span>
-                <div class="img">
-                    <img src="./images/top/icon-arrow-black.png" alt="">
-                </div>
-            </a>
         </section>
         <section class="how">
             <div class="how-title bg-content">
@@ -400,9 +412,7 @@
                     <h2 class="title">RECRUIT</h2>
                     <a href="./recruitment/" class="btn-button">
                         <span>採用情報</span>
-                        <div class="img">
-                            <img src="./images/top/icon-arrow-white.png" alt="">
-                        </div>
+                        <span class="arrow"></span>
                     </a>
                 </div>
             </div>
@@ -436,7 +446,7 @@
                 <a class="a-none" href="./message/">社長メッセージ</a>
 
             </li>
-            <li class="menu__item"> 
+            <li class="menu__item">
                 <span>RECRUIT</span>
 
                 <a class="a-none" href="./recruitment/">採用情報</a>
