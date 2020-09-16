@@ -125,7 +125,6 @@ textC2.append('rect')
     })
     .attr('rx', 13)
     .attr('fill', function(d,i) {
-        console.log(dataPieC2[i].color);
         return dataPieC2[i].color;
     });
 textC2.append('text')
@@ -180,44 +179,36 @@ C3arc.append('text')
     .text(function(d,i) {
         return dataPieC3[i].text;
     }).attr('transform', 'translate(0, 20)');
-d3.select('.chart-details.violet dt')
-    .on('mouseover', function() {
-        d3.select('.arcC21 path')
-            .style('fill', '#f4e8ff');
-    }).on('mouseout', function() {
-        d3.select('.arcC21 path')
-            .style('fill', 'white')
-    });
-d3.select('.chart-details.green dt')
-    .on('mouseover', function() {
-        d3.select('.arcC20 path')
-            .style('fill', '#f1ffd4');
-    }).on('mouseout', function() {
-        d3.select('.arcC20 path')
-            .style('fill', 'white')
-    });
-d3.select('.chart-details.blue dt')
-    .on('mouseover', function() {
-        d3.select('.arcC22 path')
-            .style('fill', '#c3eaff');
-    }).on('mouseout', function() {
-        d3.select('.arcC22 path')
-            .style('fill', 'white')
-    });
+function trans(ele1, ele2, color) {
+    d3.select(ele1)
+        .on('mouseover', function() {
+            d3.select(ele2)
+                .transition()
+                .style('fill', color);
+        }).on('mouseout', function() {
+            d3.select(ele2)
+                .transition()
+                .style('fill', 'white')
+        });
+}
+trans('.chart-details.violet dt', '.arcC21 path', '#f4e8ff');
+trans('.chart-details.green dt', '.arcC20 path', '#f1ffd4');
+trans('.chart-details.blue dt', '.arcC22 path', '#c3eaff');
+
 $('#pie').on('mouseenter', function(e) {
     $('.img-detail').css({'left': e.clientX + 15 + 'px', 'top': e.clientY + 'px'}).addClass('active');
     $(window).on('mousemove', function(e) {
         $('.img-detail').css({'left': e.clientX + 15 + 'px', 'top': e.clientY + 'px'})
     });
     $(window).on('mouseover', function(e) {
-        if(($.contains($('#pie').get(0), e.target) || $.contains($('.img-detail').get(0), e.target))) {
+        if(($.contains($('#pie').get(0), e.target) || e.target.id === 'pie' || $.contains($('.img-detail').get(0), e.target))) {
             $('.img-detail').addClass('active');
         }else{
             $('.img-detail').removeClass('active');
+            $(window).off('mouseover');
         }
     })
 });
 $('#pie').on('mouseleave', function() {
     $(window).off('mousemove');
-    // $(window).off('mouseover');
 })
