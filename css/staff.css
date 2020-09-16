@@ -253,6 +253,19 @@
   display: block;
 }
 
+.message>a {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1;
+}
+
+.message:hover {
+  opacity: 0.8;
+}
+
 @media screen and (max-width: 1023px) {
   .message {
     margin-top: 50px;
