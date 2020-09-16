@@ -13,6 +13,12 @@
   to {
     transform: translateX(-10px); } }
 
+@keyframes animateScale {
+  0% {
+    transform: scale(1); }
+  100% {
+    transform: scale(1.5); } }
+
 span.arrowLeft {
   display: block;
   width: 15px;
@@ -129,6 +135,8 @@ a.btn-button {
     font-weight: bold;
     font-family: "Montserrat", sans-serif;
     color: white; }
+  .mv-slide-top .slide-content .content.active {
+    animation: animateScale 25s alternate; }
   .mv-slide-top .slide-content .content {
     position: relative; }
     .mv-slide-top .slide-content .content img {

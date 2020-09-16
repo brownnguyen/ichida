@@ -1,0 +1,263 @@
+.main a {
+  color: inherit;
+}
+
+.main img {
+  display: block;
+}
+
+.main button {
+  outline: none;
+}
+
+.ele-hover {
+  opacity: 1;
+  transition: all 0.3s ease;
+}
+.ele-hover:hover {
+  opacity: 0.8;
+}
+
+.w-h-100 {
+  width: 100%;
+  height: 100%;
+}
+
+.w-100 {
+  width: 100%;
+}
+
+.h-100 {
+  height: 100%;
+}
+
+.w-100v {
+  width: 100vw;
+}
+
+.h-100v {
+  height: 100vh;
+}
+
+.wmax {
+  max-width: 100%;
+}
+
+@media screen and (max-width: 1140px) {
+  .top-title h2 {
+    font-size: 9.5vw !important;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .top-title h2 {
+    font-size: 5rem !important;
+  }
+}
+
+.message-h3 {
+  color: #1f1f1f;
+  font-weight: bold;
+  line-height: 1.6;
+  font-size: 2.4rem;
+  margin-bottom: 60px;
+  margin-bottom: 70px;
+}
+@media screen and (max-width: 768px) {
+  .message-h3 {
+    font-size: 1.8rem;
+    margin-bottom: 25px;
+  }
+}
+
+.message-wrap {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+}
+@media screen and (max-width: 1024px) {
+  .message-wrap {
+    padding: 0px 20px;
+  }
+}
+.message-wrap.wrap1 {
+  max-width: calc(50% + 640px);
+  margin-bottom: 110px;
+}
+@media screen and (max-width: 768px) {
+  .message-wrap.wrap1 {
+    margin-bottom: 60px;
+  }
+  .message-wrap.wrap1 .message-ul {
+    flex-direction: column-reverse;
+  }
+}
+.message-wrap.wrap2 {
+  max-width: calc(50% + 560px);
+}
+
+.message-ul {
+  max-width: 1200px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+@media screen and (max-width: 768px) {
+  .message-ul {
+    flex-direction: column;
+  }
+}
+.message-ul > li:first-of-type {
+  margin-right: 20px;
+}
+@media screen and (max-width: 768px) {
+  .message-ul > li:first-of-type {
+    margin: 0px auto;
+  }
+}
+
+.message-img {
+  max-width: 560px;
+  width: 100%;
+}
+@media screen and (max-width: 768px) {
+  .message-img {
+    max-width: unset;
+    width: auto;
+    display: table;
+    margin: 0px auto;
+  }
+}
+.message-img > span {
+  display: block;
+}
+.message-img > span:first-of-type {
+  font-size: 2.4rem;
+  letter-spacing: 0.1rem;
+  margin-top: 20px;
+}
+@media screen and (max-width: 768px) {
+  .message-img > span:first-of-type {
+    font-size: 2rem;
+  }
+}
+@media screen and (max-width: 768px) {
+  .message-img > span:first-of-type {
+    margin-top: 10px;
+  }
+}
+.message-img > span:last-of-type {
+  font-size: 1.6rem;
+  letter-spacing: 0.15rem;
+}
+@media screen and (max-width: 768px) {
+  .message-img > span:last-of-type {
+    font-size: 1.4rem;
+  }
+}
+
+.message-content {
+  max-width: 550px;
+  width: 100%;
+}
+@media screen and (max-width: 768px) {
+  .message-content {
+    max-width: 100%;
+    margin-top: 20px !important;
+  }
+}
+.message-content p {
+  font-size: 1.6rem;
+  letter-spacing: 0.15rem;
+  line-height: 1.8;
+  letter-spacing: 0.1rem;
+  letter-spacing: 0.12rem;
+}
+@media screen and (max-width: 768px) {
+  .message-content p {
+    font-size: 1.4rem;
+  }
+}
+.message-content p:last-of-type {
+  margin-top: 40px;
+}
+@media screen and (max-width: 768px) {
+  .message-content p:last-of-type {
+    margin-top: 15px;
+  }
+}
+
+.profile {
+  position: relative;
+  margin: 120px 0px 80px;
+  overflow: hidden;
+}
+@media screen and (max-width: 768px) {
+  .profile {
+    margin: 60px auto 40px;
+    display: table;
+  }
+}
+.profile-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+@media screen and (max-width: 768px) {
+  .profile-content {
+    top: 0px;
+    transform: translate(-50%, 0%);
+  }
+}
+.profile-content > * {
+  max-width: 550px;
+  width: 100%;
+}
+@media screen and (max-width: 768px) {
+  .profile-content > * {
+    max-width: 100%;
+  }
+}
+.profile-content dl {
+  line-height: 1.8;
+  letter-spacing: 0.1rem;
+  margin-top: 30px;
+}
+@media screen and (max-width: 768px) {
+  .profile-content dl {
+    margin-top: 15px;
+  }
+}
+.profile-h2 {
+  color: #3089b8;
+  font-size: 6rem;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  line-height: 1;
+  letter-spacing: 0.1rem;
+}
+@media screen and (max-width: 768px) {
+  .profile-h2 {
+    font-size: 4rem;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .profile .img_destop {
+    min-height: 260px;
+    width: auto;
+    max-width: unset;
+    height: 34vw;
+  }
+}
+@media screen and (max-width: 768px) {
+  .profile .img_destop {
+    height: auto;
+    max-width: 100%;
+  }
+}
+
