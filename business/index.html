@@ -18,6 +18,7 @@
     <link rel="stylesheet" href="../css/business.css">
     <title>Uchida | 事業紹介</title>
     <link href="https://fonts.googleapis.com/css2?family=Roboto&family=Roboto+Condensed:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&display=swap" rel="stylesheet">
 </head>
 
 <body>
@@ -156,7 +157,11 @@
         <section class="partTwo">
             <div class="container">
                 <h3 class="partTwo-h3">- 内田洋行グループの事業構造</h3>
-                <div class="partTwo-chart" id="chart">
+                <picture>
+                    <source media="(max-width:768px)" srcset="../images/business/img_chartsp.png">
+                    <img src="../images/business/img_chartpc.png" alt="図" class="wmax img_destop">
+                </picture>
+                <!-- <div class="partTwo-chart" id="chart">
                     <figure class="img-detail">
                         <img src="../images/business/img_detail_chart.jpg" alt="図" class="wmax">
                     </figure>
@@ -196,7 +201,7 @@
                             </dd>
                         </dl>
                     </div>
-                </div>
+                </div> -->
                 <div class="partTwo-wrap">
                     <ul class="partTwo-ul green">
                         <li class="partTwo-li li-title">環境構築関連事業・その他</li>
@@ -442,7 +447,7 @@
     <script src="../assets/js/jquery-2.2.4.min.js"></script>
     <script src="../assets/js/d3.min.js"></script>
     <script src="../js/general.js"></script>
-    <script src="../js/business.js"></script>
+    <!-- <script src="../js/business.js"></script> -->
 </body>
 
 </html>
