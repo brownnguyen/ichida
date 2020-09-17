@@ -26,7 +26,6 @@ body {
 
 .footer__linkto a,
 .breadcrumb ul li.active a,
-.top-title h2 span,
 .top-title h2,
 .menu__item span,
 .header__menu .menu .menu__item span,
@@ -45,12 +44,12 @@ body {
     color: #1f1f1f;
 }
 
-.top-title h2,
+.top-title h2 span,
 .header__menu .menu .menu__item span {
     font-family: "Montserrat", sans-serif;
 }
 
-.top-title h2 span,
+.top-title h2,
 .header__menu .menu .menu__item.menu__logo span a {
     font-family: "游ゴシック Medium", "Yu Gothic Medium", "游ゴシック体", YuGothic, "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic ProN", "Hiragino Kaku Gothic Pro", "メイリオ", "ＭＳ ゴシック", sans-serif;
 }
@@ -81,19 +80,20 @@ body {
     }
 }
 
-body::-webkit-scrollbar-track {
+::-webkit-scrollbar-track {
     box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
-    border-radius: 20px;
+    border-radius: 10px;
     background-color: #f5f5f5;
 }
 
-body::-webkit-scrollbar {
-    width: 10px;
+::-webkit-scrollbar {
+    width: 5px;
+    border-radius: 10px;
     background-color: #f5f5f5;
 }
 
-body::-webkit-scrollbar-thumb {
-    border-radius: 20px;
+::-webkit-scrollbar-thumb {
+    border-radius: 10px;
     box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
     background-color: #555;
 }
@@ -114,7 +114,6 @@ body::-webkit-scrollbar-thumb {
 .footer__linkto,
 .footer__decor,
 .breadcrumb ul,
-.top-title h2,
 .menu__item,
 .menu,
 .header__entry,
@@ -202,16 +201,9 @@ li,
     top: 0;
     right: 0;
     margin: 0 auto;
+    background-color: #fff;
     transition: 0.3s ease-in;
-    background-image: linear-gradient(90deg, white 0%, white 100%);
-    background-repeat: no-repeat;
-    background-size: 0 100%;
-    background-position: center;
     z-index: 1030;
-}
-
-.header.active {
-    background-size: 100% 100%;
 }
 
 @media only screen and (max-width: 1024px) {
@@ -293,6 +285,7 @@ li,
     margin: 0;
     padding: 1rem 2rem 3rem 8rem;
     background-color: #333;
+    opacity: 0;
     flex-direction: column;
     transform: translateX(-100%);
     transition: all 0.3s ease-in;
@@ -301,10 +294,15 @@ li,
 @media only screen and (max-width: 1024px) {
     .header__menu {
         width: 32rem;
+        left: auto;
+        right: 0;
+        transform: translateX(100%);
+        padding-right: 0;
     }
 }
 
 .header__menu.active {
+    opacity: 1;
     transform: translateX(0%);
 }
 
@@ -317,6 +315,7 @@ li,
 @media only screen and (max-width: 768px) {
     .header__menu .menu {
         overflow-y: auto;
+        padding-right: 2rem;
     }
 }
 
@@ -486,7 +485,7 @@ li,
 @media only screen and (max-width: 1024px) {
     .hambuger-button {
         top: 3rem;
-        left: calc(20px);
+        left: calc(100% - 40px);
     }
 }
 
@@ -542,33 +541,34 @@ li,
 }
 
 .top-title h2 {
-    color: #3089b8;
-    font-size: 13rem;
     width: 100%;
+    display: flex;
     justify-content: space-between;
     letter-spacing: 0.5rem;
     line-height: 100px;
     padding-top: 6.5rem;
     padding-bottom: 5.5rem;
-}
-
-@media only screen and (max-width: 768px) {
-    .top-title h2 {
-        flex-direction: column;
-        font-size: 5rem;
-        line-height: 50px;
-    }
-}
-
-.top-title h2 span {
     font-size: 3.2rem;
     color: #1f1f1f;
 }
 
 @media only screen and (max-width: 768px) {
-    .top-title h2 span {
+    .top-title h2 {
         font-size: 2rem;
         line-height: 20px;
+        flex-direction: column;
+    }
+}
+
+.top-title h2 span {
+    color: #3089b8;
+    font-size: 13rem;
+}
+
+@media only screen and (max-width: 768px) {
+    .top-title h2 span {
+        font-size: 5rem;
+        line-height: 50px;
     }
 }
 
@@ -661,6 +661,7 @@ li,
     background-color: #3089b8;
     align-items: flex-end;
     justify-content: center;
+    cursor: pointer;
 }
 
 @media only screen and (max-width: 768px) {
