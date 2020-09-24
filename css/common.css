@@ -217,6 +217,12 @@ li,
     }
 }
 
+@media only screen and (max-width: 768px) {
+    .header {
+        justify-content: flex-start;
+    }
+}
+
 .header__logo {
     width: 9rem;
     height: 4rem;
@@ -353,7 +359,13 @@ li,
 
 @media only screen and (max-width: 1024px) {
     .header__menu .menu .menu__item span {
-        margin-top: 3rem;
+        margin-top: 0rem;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .header__menu .menu .menu__item span {
+        font-size: 2rem;
     }
 }
 
@@ -436,7 +448,7 @@ li,
     }
 
     .menu__item:not(:first-child) {
-        margin-top: 3rem;
+        margin-top: 2rem;
     }
 }
 
@@ -538,25 +550,31 @@ li,
  */
 .top-title {
     width: 100%;
+    border-bottom: 1px solid #ccc;
 }
 
 .top-title h2 {
     width: 100%;
     display: flex;
+    align-items: center;
     justify-content: space-between;
     letter-spacing: 0.5rem;
-    line-height: 100px;
+    line-height: 1.2;
     padding-top: 6.5rem;
     padding-bottom: 5.5rem;
     font-size: 3.2rem;
     color: #1f1f1f;
 }
+@media only screen and (max-width: 1600px) {
+    .top-title h2 {
+        font-size: 2vw;
+    }
+}
 
 @media only screen and (max-width: 768px) {
     .top-title h2 {
-        font-size: 2rem;
-        line-height: 20px;
-        flex-direction: column;
+        font-size: 3.75vw;
+        letter-spacing: 0.1rem;
     }
 }
 
@@ -564,20 +582,25 @@ li,
     color: #3089b8;
     font-size: 13rem;
 }
-
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 1600px) {
     .top-title h2 span {
-        font-size: 5rem;
-        line-height: 50px;
+        font-size: 8.125vw;
     }
 }
 
-.top-title .obj-line {
+@media only screen and (max-width: 768px) {
+    .top-title h2 span {
+        /*font-size: 5rem;
+        line-height: 50px;*/
+    }
+}
+
+/*.top-title .obj-line {
     display: block;
     width: 100%;
     background-color: #cccccc;
     height: 0.1rem;
-}
+}*/
 
 /**
  * breadcrumb
@@ -602,11 +625,13 @@ li,
 @media only screen and (max-width: 500px) {
     .breadcrumb ul {
         flex-direction: column;
+        display: inline-block;
     }
 }
 
 .breadcrumb ul li {
     position: relative;
+    display: inline;
 }
 
 .breadcrumb ul li.active a {
@@ -618,16 +643,6 @@ li,
     max-width: 5px;
     display: inline-block;
     margin: 0 2rem;
-}
-
-@media only screen and (max-width: 500px) {
-    .breadcrumb ul li:not(:first-child)::before {
-        content: "";
-        border: 0.5rem solid transparent;
-        border-left-color: #3089c8;
-        margin-left: 0;
-        margin-right: 0.5rem;
-    }
 }
 
 .breadcrumb ul li a {
@@ -662,8 +677,12 @@ li,
     align-items: flex-end;
     justify-content: center;
     cursor: pointer;
+    transition: all .3s ease;
 }
 
+.footer__decor:hover{
+    opacity: 0.8;
+}
 @media only screen and (max-width: 768px) {
     .footer__decor {
         height: 6rem;
@@ -720,25 +739,6 @@ li,
     justify-content: center;
 }
 
-@media only screen and (max-width: 768px) {
-    .to-top-button {
-        display: none;
-        opacity: 0;
-        width: 5rem;
-        border-radius: 2.5rem;
-        border: 2px solid #3089b8;
-        position: fixed;
-        right: 2rem;
-        bottom: 6rem;
-        background-color: #3089b8;
-    }
-
-    .to-top-button.active {
-        display: flex;
-        opacity: 1;
-    }
-}
-
 .to-top-button:hover {
     opacity: 0.75;
 }
@@ -750,16 +750,6 @@ li,
     position: relative;
     background-color: #fff;
     transition: all 0.3s ease;
-}
-
-@media only screen and (max-width: 768px) {
-    .to-top-button span {
-        background-color: transparent;
-        height: 2rem;
-        border: 1.2rem solid transparent;
-        border-bottom: 1.2rem solid #fff;
-        transform: translateY(-0.8rem);
-    }
 }
 
 .to-top-button span::after {
@@ -775,8 +765,6 @@ li,
     transition: all 0.3s ease;
 }
 
-@media only screen and (max-width: 768px) {
-    .to-top-button span::after {
-        display: none;
-    }
+.lightboxOverlay{
+    background-color: #fff;
 }
