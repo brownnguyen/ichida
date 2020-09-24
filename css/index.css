@@ -179,12 +179,6 @@ a.btn-button span {
   font-size: 2.4rem;
   font-weight: bold;
 }
-a.btn-button img {
-  transition: 0.5s ease-in-out;
-}
-a.btn-button:hover img {
-  transform: translateX(20px);
-}
 
 .mv-slide-top {
   position: relative;
@@ -533,14 +527,15 @@ a.btn-button:hover img {
 .how-content .content .img .btn-how img {
   transition: 0.5s ease-in-out;
 }
-.how-content .content .img .btn-how:hover img {
-  transform: translateX(10px);
-}
 .how-content .content .details .text {
   max-width: 560px;
   width: 100%;
   margin: auto;
   padding: 40px 20px;
+  color: #333333;
+}
+.how-content .content:hover .btn-how img {
+  transform: translateX(10px);
 }
 
 .top-message {
@@ -733,11 +728,20 @@ a.btn-button:hover img {
     margin-top: 5px;
     width: 30px;
   }
+  .top-message {
+    margin: 30px 0 60px 0;
+  }
+  .top-message .border-top-mess {
+    padding: 0;
+  }
   .bg-content {
     padding: 30px 0;
   }
   .bg-content .content .title {
     font-size: 5rem;
+  }
+  .bg-content .content .text {
+    font-size: 1.4rem;
   }
   .top-message .top-mess-title {
     font-size: 3.2rem;
@@ -777,7 +781,7 @@ a.btn-button:hover img {
     height: 45px;
   }
   .what .what-case {
-    width: 80%;
+    width: 90%;
   }
   .what .what-case .case-content {
     padding: 10px;
@@ -793,6 +797,15 @@ a.btn-button:hover img {
   .what .what-case .case-content .content .text img {
     margin: 15px auto;
   }
+  .what .what-case .case-content .content .text span {
+    font-size: 1.6rem;
+  }
+  .what .what-case .case-content .content .case {
+    font-size: 1.6rem;
+  }
+  .what .what-case .case-content .content .case span {
+    font-size: 1.6rem;
+  }
   .who-people .content {
     max-width: 430px;
     width: 100%;
@@ -801,8 +814,12 @@ a.btn-button:hover img {
   .btn-button .img img {
     width: 40px;
   }
+  .recruit .recruit-content {
+    padding: 30px 0 40px 0;
+  }
   .recruit .recruit-content h2.title {
     font-size: 5rem;
+    margin-bottom: 20px;
   }
   .recruit .recruit-content a.btn-button {
     padding: 0 15px;

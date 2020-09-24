@@ -51,14 +51,101 @@ body {
 
 .top-title h2,
 .header__menu .menu .menu__item.menu__logo span a {
-    font-family: "游ゴシック Medium", "Yu Gothic Medium", "游ゴシック体", YuGothic, "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic ProN", "Hiragino Kaku Gothic Pro", "メイリオ", "ＭＳ ゴシック", sans-serif;
+    font-family: "游ゴシック Medium", "Yu Gothic Medium", "游ゴシック体", YuGothic,
+        "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic ProN",
+        "Hiragino Kaku Gothic Pro", "メイリオ", "ＭＳ ゴシック", sans-serif;
 }
 
 body {
-    font-family: "游ゴシック Medium", "Yu Gothic Medium", "游ゴシック体", YuGothic, "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic ProN", "Hiragino Kaku Gothic Pro", "メイリオ", "ＭＳ ゴシック", sans-serif;
+    font-family: "游ゴシック Medium", "Yu Gothic Medium", "游ゴシック体", YuGothic,
+        "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic ProN",
+        "Hiragino Kaku Gothic Pro", "メイリオ", "ＭＳ ゴシック", sans-serif;
     font-size: 1.4rem;
     padding: 0 6rem;
     overflow-x: hidden;
+}
+
+a.btn-button {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 420px;
+    width: 100%;
+    height: 90px;
+    position: relative;
+    overflow: hidden;
+    transform: translateY(-25px);
+    margin: auto;
+    margin-bottom: 35px;
+    background-color: white;
+    border: 4px solid #333333;
+    color: #333333;
+    padding: 0 33px 0 40px;
+}
+
+a.btn-button:before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0%;
+    background-color: #333333;
+    height: 100%;
+    content: "";
+    z-index: -1;
+    transition: 0.3s ease-in-out;
+}
+
+a.btn-button span.arrow {
+    width: 50px;
+    height: 10px;
+    display: block;
+    position: relative;
+    overflow: hidden;
+}
+
+a.btn-button span.arrow:before {
+    width: 100%;
+    content: "";
+    height: 2px;
+    background-color: #333333;
+    position: absolute;
+    bottom: 0;
+    left: -2px;
+    transition: 0.3s ease-in-out;
+}
+
+a.btn-button span.arrow:after {
+    width: 20px;
+    height: 2px;
+    background-color: #333333;
+    content: "";
+    position: absolute;
+    right: -7px;
+    bottom: 0;
+    transform: rotate(45deg);
+    transition: 0.3s ease-in-out;
+}
+
+a.btn-button:hover {
+    color: white;
+    opacity: 1;
+}
+
+a.btn-button:hover span.arrow:before {
+    background-color: white;
+}
+
+a.btn-button:hover span.arrow:after {
+    background-color: white;
+}
+
+a.btn-button:hover:before {
+    width: 100%;
+}
+
+a.btn-button span {
+    font-size: 2.4rem;
+    font-weight: bold;
 }
 
 @media screen and (-ms-high-contrast: active),
@@ -77,6 +164,17 @@ body {
 @media only screen and (max-width: 768px) {
     body {
         font-size: 1.4rem;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    a.btn-button {
+        height: 60px;
+        border-width: 3px !important;
+    }
+
+    a.btn-button span {
+        font-size: 1.6rem;
     }
 }
 
@@ -134,6 +232,21 @@ body {
     right: 0;
     width: 100%;
     height: 100%;
+}
+
+.style-h3 {
+    color: #1f1f1f;
+    font-weight: bold;
+    line-height: 1.6;
+    font-size: 2.4rem;
+    margin-bottom: 60px;
+}
+
+@media only screen and (max-width: 768px) {
+    .style-h3 {
+        font-size: 1.8rem;
+        margin-bottom: 25px;
+    }
 }
 
 .a-none {
@@ -354,7 +467,7 @@ li,
     font-size: 3.6rem;
     border-bottom: 0;
     margin-bottom: 0;
-    margin-top: 5rem;
+    margin-top: 3rem;
 }
 
 @media only screen and (max-width: 1024px) {
@@ -590,13 +703,20 @@ li,
     }
 }
 
-@media only screen and (max-width: 768px) {
+/*@media only screen and (max-width: 768px) {
     .top-title h2 span {
         /*font-size: 5rem;
         line-height: 50px;*/
+}
+
+@media only screen and (max-width: 768px) {
+    .top-title h2 span {
+        font-size: 5rem;
+        line-height: 50px;
     }
 }
 
+*/
 
 /**
  * breadcrumb
@@ -620,7 +740,6 @@ li,
 
 @media only screen and (max-width: 500px) {
     .breadcrumb ul {
-        flex-direction: column;
         display: inline-block;
     }
 }
@@ -628,6 +747,13 @@ li,
 .breadcrumb ul li {
     position: relative;
     display: inline;
+
+}
+}
+
+.breadcrumb ul li {
+    position: relative;
+
 }
 
 .breadcrumb ul li.active a {
@@ -736,10 +862,6 @@ li,
     justify-content: center;
 }
 
-.to-top-button:hover {
-    opacity: 0.75;
-}
-
 .to-top-button span {
     width: 0.2rem;
     height: 5rem;
@@ -747,6 +869,16 @@ li,
     position: relative;
     background-color: #fff;
     transition: all 0.3s ease;
+}
+
+@media only screen and (max-width: 768px) {
+    .to-top-button span {
+        background-color: transparent;
+        height: 2rem;
+        border: 1.2rem solid transparent;
+        border-bottom: 1.2rem solid #fff;
+        transform: translateY(-0.8rem);
+    }
 }
 
 .to-top-button span::after {
