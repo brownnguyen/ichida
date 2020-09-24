@@ -565,6 +565,7 @@ li,
     font-size: 3.2rem;
     color: #1f1f1f;
 }
+
 @media only screen and (max-width: 1600px) {
     .top-title h2 {
         font-size: 2vw;
@@ -582,6 +583,7 @@ li,
     color: #3089b8;
     font-size: 13rem;
 }
+
 @media only screen and (max-width: 1600px) {
     .top-title h2 span {
         font-size: 8.125vw;
@@ -595,12 +597,6 @@ li,
     }
 }
 
-/*.top-title .obj-line {
-    display: block;
-    width: 100%;
-    background-color: #cccccc;
-    height: 0.1rem;
-}*/
 
 /**
  * breadcrumb
@@ -680,9 +676,10 @@ li,
     transition: all .3s ease;
 }
 
-.footer__decor:hover{
+.footer__decor:hover {
     opacity: 0.8;
 }
+
 @media only screen and (max-width: 768px) {
     .footer__decor {
         height: 6rem;
@@ -765,6 +762,6 @@ li,
     transition: all 0.3s ease;
 }
 
-.lightboxOverlay{
+.lightboxOverlay {
     background-color: #fff;
 }
